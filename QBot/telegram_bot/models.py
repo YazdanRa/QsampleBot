@@ -13,3 +13,14 @@ class User(models.Model):
 
     def __str__(self):
         return "{} {} (@{})".format(self.first_name, self.last_name, self.username)
+
+
+class TelegramUpdate(models.Model):
+    update_id = models.CharField(max_length=128)
+    message = models.JSONField(null=True, blank=True)
+    edited_message = models.JSONField(null=True, blank=True)
+    channel_post = models.JSONField(null=True, blank=True)
+    edited_channel_post = models.JSONField(null=True, blank=True)
+    inline_query = models.JSONField(null=True, blank=True)
+    chosen_inline_result = models.JSONField(null=True, blank=True)
+    callback_query = models.JSONField(null=True, blank=True)
