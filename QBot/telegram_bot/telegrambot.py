@@ -2,7 +2,7 @@ import logging
 
 from django_telegrambot.apps import DjangoTelegramBot
 
-from QBot.telegram_bot.processors import (
+from QBot.telegram_bot.views import (
     start,
 )
 
