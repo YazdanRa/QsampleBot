@@ -52,9 +52,12 @@ THIRD_PART_APPS = [
 
 DJANGO_APPS = [
     "telegram_bot.apps.TelegramBotConfig",
+    "user.apps.UserConfig",
 ]
 
 INSTALLED_APPS = PRIMARY_APPS + THIRD_PART_APPS + DJANGO_APPS
+
+AUTH_USER_MODEL = "user.CustomUser"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

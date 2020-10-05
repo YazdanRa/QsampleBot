@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class User(models.Model):
+class TelegramUser(models.Model):
     chat_id = models.BigIntegerField(primary_key=True)
     first_name = models.CharField(max_length=256)
     last_name = models.CharField(max_length=256, null=True, blank=True)
