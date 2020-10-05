@@ -5,7 +5,9 @@ DJANGO_TELEGRAMBOT = {
     "MODE": "POLLING",
     "BOTS": [
         {
-            "TOKEN": os.getenv("BOT_TOKEN"),  # Your bot token.
+            "TOKEN": os.getenv(
+                "BOT_TOKEN", "1062412615:AAHLZ974OBY3goSSoX6HePTapjgdJMYFnEY"
+            ),
             "CONTEXT": True,
             # 'POLL_INTERVAL' : (Optional[float]), # Time to wait between polling updates from Telegram in
             # seconds. Default is 0.0
