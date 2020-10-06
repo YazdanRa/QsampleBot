@@ -133,3 +133,9 @@ dmypy.json
 .idea/misc.xml
 .idea/modules.xml
 .idea/vcs.xml
+.idea/dataSources/
+.idea/workspace.xml
+
+
+# Static files
+static/
