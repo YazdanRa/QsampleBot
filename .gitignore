@@ -127,14 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-.idea/.gitignore
-.idea/QsampleBot.iml
-.idea/inspectionProfiles/
-.idea/misc.xml
-.idea/modules.xml
-.idea/vcs.xml
-.idea/dataSources/
-.idea/workspace.xml
+.idea
 
 
 # Static files
