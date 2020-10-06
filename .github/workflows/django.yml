@@ -27,7 +27,7 @@ jobs:
         pip install -r requirements.txt
     - name: Code Style
       run: |
-        black --check --diff --color .
+        black --check --diff --color QBot
     - name: Run Tests
       run: |
         python QBot/manage.py test
