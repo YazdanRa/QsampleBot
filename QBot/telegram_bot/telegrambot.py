@@ -5,6 +5,7 @@ from django_telegrambot.apps import DjangoTelegramBot
 from .views import (
     start,
     sign_up,
+    login,
 )
 
 logger = logging.getLogger(__name__)
@@ -17,6 +18,7 @@ def main():
     handlers = [
         (start.HANDLER, 1),
         (sign_up.HANDLER, 1),
+        (login.HANDLER, 1),
     ]
 
     for handler in handlers:
