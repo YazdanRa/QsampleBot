@@ -68,6 +68,5 @@ HANDLER = ConversationHandler(
     fallbacks=[
         MessageHandler(Filters.text("Cancel"), cancel),
         MessageHandler(Filters.text, wrong_message),
-        MessageHandler(Filters.all, error),
     ],
 )
