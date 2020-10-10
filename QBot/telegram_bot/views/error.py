@@ -19,8 +19,7 @@ def cancel(update: Update, context: CallbackContext):
     context.bot.send_message(
         chat_id,
         text="cancel",
-        reply_markup=ReplyKeyboardMarkup(
-            reply_keyboard, one_time_keyboard=True),
+        reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
         parse_mode="Markdown",
     )
     return ConversationHandler.END

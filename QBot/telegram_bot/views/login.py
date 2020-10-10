@@ -19,8 +19,7 @@ def logging_in(update: Update, context: CallbackContext):
     context.bot.send_message(
         chat_id,
         text="options:",
-        reply_markup=ReplyKeyboardMarkup(
-            reply_keyboard, one_time_keyboard=True),
+        reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
         parse_mode="Markdown",
     )
     return BASE
@@ -36,8 +35,7 @@ def default_login(update: Update, context: CallbackContext):
     context.bot.send_message(
         chat_id,
         text=text,
-        reply_markup=ReplyKeyboardMarkup(
-            reply_keyboard, one_time_keyboard=True),
+        reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
         parse_mode="Markdown",
     )
     return ConversationHandler.END
@@ -49,8 +47,7 @@ def custom_login(update: Update, context: CallbackContext):
     context.bot.send_message(
         chat_id,
         text="on development",
-        reply_markup=ReplyKeyboardMarkup(
-            reply_keyboard, one_time_keyboard=True),
+        reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
         parse_mode="Markdown",
     )
     return ConversationHandler.END
@@ -60,8 +57,7 @@ HANDLER = ConversationHandler(
     entry_points=[MessageHandler(Filters.regex(r"(Login)"), logging_in)],
     states={
         BASE: [
-            MessageHandler(Filters.regex(
-                r"(with Telegram account)"), default_login),
+            MessageHandler(Filters.regex(r"(with Telegram account)"), default_login),
             MessageHandler(Filters.regex(r"(custom login)"), custom_login),
         ],
     },

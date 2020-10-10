@@ -14,8 +14,7 @@ def signing_up(update: Update, context: CallbackContext):
     context.bot.send_message(
         chat_id,
         text="options:",
-        reply_markup=ReplyKeyboardMarkup(
-            reply_keyboard, one_time_keyboard=True),
+        reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
         parse_mode="Markdown",
     )
     return BASE
@@ -47,8 +46,7 @@ def default_create_user(update: Update, context: CallbackContext):
     context.bot.send_message(
         chat_id,
         text=text,
-        reply_markup=ReplyKeyboardMarkup(
-            reply_keyboard, one_time_keyboard=True),
+        reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
         parse_mode="Markdown",
     )
     return ConversationHandler.END
@@ -60,8 +58,7 @@ def custom_create_user(update: Update, context: CallbackContext):
     context.bot.send_message(
         chat_id,
         text="on development",
-        reply_markup=ReplyKeyboardMarkup(
-            reply_keyboard, one_time_keyboard=True),
+        reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
         parse_mode="Markdown",
     )
     return ConversationHandler.END
@@ -74,8 +71,7 @@ HANDLER = ConversationHandler(
             MessageHandler(
                 Filters.regex(r"(with Telegram account)"), default_create_user
             ),
-            MessageHandler(Filters.regex(r"(custom sign up)"),
-                           custom_create_user),
+            MessageHandler(Filters.regex(r"(custom sign up)"), custom_create_user),
         ],
     },
     fallbacks=[
