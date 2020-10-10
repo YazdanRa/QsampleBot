@@ -24,11 +24,3 @@ def cancel(update: Update, context: CallbackContext):
         parse_mode="Markdown",
     )
     return ConversationHandler.END
-
-
-def error(update: Update, context: CallbackContext):
-    chat_id = update.message.chat.id
-    context.bot.send_message(
-        chat_id, ("Oops...\n" + "Not acceptable command!\n" + "Try again")
-    )
-    return ConversationHandler.END
