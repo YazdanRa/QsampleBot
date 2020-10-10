@@ -6,7 +6,7 @@ from telegram.ext import (
     MessageHandler,
 )
 from .start import reply_keyboard
-from .error import error, cancel, wrong_message
+from .error import cancel, wrong_message
 from ..models import TelegramUser
 
 BASE = 0

@@ -1,7 +1,7 @@
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import CallbackContext, ConversationHandler, Filters, MessageHandler
 from .start import reply_keyboard
-from .error import error, wrong_message, cancel
+from .error import wrong_message, cancel
 from ..models import TelegramUser
 
 BASE = 0
@@ -81,6 +81,5 @@ HANDLER = ConversationHandler(
     fallbacks=[
         MessageHandler(Filters.text("Cancel"), cancel),
         MessageHandler(Filters.text, wrong_message),
-        MessageHandler(Filters.all, error),
     ],
 )
