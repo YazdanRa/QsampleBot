@@ -4,7 +4,7 @@ from django_telegrambot.apps import DjangoTelegramBot
 
 from .views import (
     start,
-    sign_up,
+    register,
     login,
 )
 
@@ -17,8 +17,8 @@ def main():
 
     handlers = [
         (start.HANDLER, 1),
-        (sign_up.HANDLER, 1),
-        (login.HANDLER, 1),
+        (register.HANDLER, 2),
+        (login.HANDLER, 3),
     ]
 
     for handler in handlers:
