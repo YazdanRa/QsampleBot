@@ -7,6 +7,7 @@ from .models import TelegramUpdate, TelegramUser
 
 def process_error(update: Update, context: CallbackContext):
     try:
+        # TODO: log the exception in sentry_sdk and logger
         context.bot.send_message(
             update.message.chat.id,
             "We have encountered an internal error!\n"
