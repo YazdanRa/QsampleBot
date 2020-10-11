@@ -77,6 +77,9 @@ def get_password(update, context):
     password = update.message.text
     context.user_data["password"] = password
 
+    # remove the password from messages for security issues
+    context.bot.delete_message(chat_id, update.message.message_id)
+
     context.bot.send_message(
         chat_id=chat_id,
         text=(
